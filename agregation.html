@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrégation - Lilian THÉBAUD</title>
+    <link rel="stylesheet" href="style_css/style.css">
+
+    <!-- Support de LaTeX dans le navigateur via MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo"><a href="index.html">Lilian THÉBAUD</a></div>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-btn">&#9776;</label>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="parcours.html">Mon parcours</a></li>
+                <li><a href="recherche.html">Recherche</a></li>
+                <li><a href="agregation.html" class="active">Agrégation</a></li>
+                <li><a href="files/CV.pdf" target="_blank">CV (PDF)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-title">
+            <h1>Agrégation Externe de Mathématiques</h1>
+            <p class="subtitle">Plans de leçons, développements et notes de révision</p>
+        </section>
+
+        <!-- Barre de recherche et filtres -->
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="lesson-search" placeholder="Rechercher une leçon, un développement, un numéro..." onkeyup="filterLessons()">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterCategory('all', this)">Tous</button>
+                    <button class="filter-btn" onclick="filterCategory('algebre', this)">Algèbre & Géométrie</button>
+                    <button class="filter-btn" onclick="filterCategory('analyse', this)">Analyse & Probabilités</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Liste des leçons -->
+        <section class="lessons-grid" id="lessons-list">
+
+            <!-- Exemple Leçon 1 -->
+            <div class="lesson-card" data-category="algebre">
+                <div class="lesson-header">
+                    <span class="lesson-num">Leçon 101</span>
+                    <span class="badge algebre">Algèbre</span>
+                </div>
+                <h3>Groupe d'isométries d'une figure plane ou d'un solide</h3>
+                <p class="lesson-devs"><strong>Développements :</strong> Table de caractères de $S_4$, Isométries du tétraèdre.</p>
+                <div class="lesson-links">
+                    <a href="files/agreg/101_plan.pdf" target="_blank">📄 Plan (PDF)</a>
+                    <a href="files/agreg/101_dev1.pdf" target="_blank">📝 Dev 1</a>
+                </div>
+            </div>
+
+            <!-- Exemple Leçon 2 -->
+            <div class="lesson-card" data-category="analyse">
+                <div class="lesson-header">
+                    <span class="lesson-num">Leçon 226</span>
+                    <span class="badge analyse">Analyse</span>
+                </div>
+                <h3>Suites de variables aléatoires indépendantes et de même loi</h3>
+                <p class="lesson-devs"><strong>Développements :</strong> Loi forte des grands nombres, Théorème central limite.</p>
+                <div class="lesson-links">
+                    <a href="files/agreg/226_plan.pdf" target="_blank">📄 Plan (PDF)</a>
+                    <a href="files/agreg/226_dev1.pdf" target="_blank">📝 TCL</a>
+                </div>
+            </div>
+
+            <!-- Exemple Leçon 3 -->
+            <div class="lesson-card" data-category="analyse">
+                <div class="lesson-header">
+                    <span class="lesson-num">Leçon 236</span>
+                    <span class="badge analyse">Analyse</span>
+                </div>
+                <h3>Espaces de Hilbert. Bases hilbertiennes. Exemples</h3>
+                <p class="lesson-devs"><strong>Développements :</strong> Projection sur un convexe fermé, Surjectivité de l'exponentielle matricielle.</p>
+                <div class="lesson-links">
+                    <a href="files/agreg/236_plan.pdf" target="_blank">📄 Plan (PDF)</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 - Lilian THÉBAUD | Hébergé sur GitHub Pages</p>
+        </div>
+    </footer>
+
+    <!-- Script JS pour la recherche en temps réel -->
+    <script>
+        let currentCategory = 'all';
+
+        function filterLessons() {
+            const query = document.getElementById('lesson-search').value.toLowerCase();
+            const cards = document.querySelectorAll('.lesson-card');
+
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                const category = card.getAttribute('data-category');
+
+                const matchesQuery = text.includes(query);
+                const matchesCategory = (currentCategory === 'all' || category === currentCategory);
+
+                if (matchesQuery && matchesCategory) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        function filterCategory(category, button) {
+            currentCategory = category;
+            
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            filterLessons();
+        }
+    </script>
+
+</body>
+</html>
