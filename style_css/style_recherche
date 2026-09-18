@@ -1,0 +1,91 @@
+/* Style pour la page Recherche */
+.research-section {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+.research-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.paper-card {
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-bottom: 20px;
+    background-color: #fafdfa;
+}
+
+.paper-card.highlight {
+    border-left: 4px solid var(--accent-color); /* Met en valeur la carte mémoire */
+    background-color: #ffffff;
+}
+
+.paper-card:last-child {
+    margin-bottom: 0;
+}
+
+.paper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.paper-header h3 {
+    color: var(--primary-color);
+    font-size: 1.15rem;
+}
+
+.paper-date, .paper-status {
+    background-color: #e2ece4;
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.paper-authors {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin-bottom: 10px;
+}
+
+.paper-abstract {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.paper-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .paper-header {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
