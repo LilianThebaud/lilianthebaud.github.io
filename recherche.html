@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche - Lilian THÉBAUD</title>
+    <link rel="stylesheet" href="style_css/style.css">
+
+    <!-- Support de LaTeX dans le navigateur via MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo"><a href="index.html">Lilian THÉBAUD</a></div>
+
+            <!-- Case à cocher et bouton pour le menu latéral mobile -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-btn">&#9776;</label>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="parcours.html">Mon parcours</a></li>
+                <li><a href="recherche.html" class="active">Recherche</a></li>
+                <li><a href="agregation.html">Agrégation</a></li>
+                <li><a href="files/CV.pdf" target="_blank">CV (PDF)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-title">
+            <h1>Recherche & Travaux</h1>
+            <p class="subtitle">Processus stochastiques, géométrie aléatoire et théorèmes limites</p>
+        </section>
+
+        <!-- Section Mémoire / Thèse -->
+        <section class="research-section">
+            <h2>Mémoire & Thèse</h2>
+            <div class="paper-card highlight">
+                <div class="paper-header">
+                    <h3>Mémoire de Master 2 : Modèles poissoniens et champs de shot-noise</h3>
+                    <span class="paper-date">2024</span>
+                </div>
+                <p class="paper-authors"><strong>Lilian Thébaud</strong> — Sous la direction de [Nom du directeur]</p>
+                <p class="paper-abstract">
+                    <strong>Résumé :</strong> Étude du comportement asymptotique des champs de shot-noise construits sur des processus ponctuels de Poisson. Analyse des régimes de fluctuations sous des hypothèses de queues lourdes (densités de Pareto et variation régulière via le théorème de Karamata).
+                </p>
+                <div class="paper-links">
+                    <a href="files/pdf/memoire_M2.pdf" class="btn-link" target="_blank">📄 Télécharger le mémoire (PDF)</a>
+                    <a href="files/pdf/soutenance_M2.pdf" class="btn-link" target="_blank">📊 Chiffres / Présentation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Publications et Preprints -->
+        <section class="research-section">
+            <h2>Articles & Preprints</h2>
+            
+            <div class="paper-card">
+                <div class="paper-header">
+                    <h3>Scaling limits for random grain models with heavy-tailed distributions</h3>
+                    <span class="paper-status">Preprint</span>
+                </div>
+                <p class="paper-authors"><strong>Lilian Thébaud</strong>, [Co-auteur]</p>
+                <p class="paper-abstract">
+                    Dans cet article, nous établissons des théorèmes limites pour des modèles de grains aléatoires basés sur des processus ponctuels de Poisson dans $\mathbb{R}^d$, en présence de dépendance à longue portée et d'indices d'instabilité $\alpha \in (0,2)$.
+                </p>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/" class="btn-link" target="_blank">arXiv:XXXX.XXXXX</a>
+                    <a href="https://hal.science/" class="btn-link" target="_blank">HAL</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 - Lilian THÉBAUD | Hébergé sur GitHub Pages</p>
+        </div>
+    </footer>
+
+</body>
+</html>
