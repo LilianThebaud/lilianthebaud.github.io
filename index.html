@@ -1,62 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Students Power - Accueil</title>
-        <link rel="stylesheet" href="style_css/accueil_avant_connexion.css">
-        <link rel="stylesheet" href="style_css/mise_en_page_general_avant_connec.css">
-        <link rel="icon" href="../photo/logo/legoacueils.png" type="image/png" sizes="16x16">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ton Nom - Doctorant en Mathématiques</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Support de LaTeX dans le navigateur via MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
 
-    <body>
-        <header>
-            <div id="logo"><a href="Accueil.html"><img src="../photo/logo/logo.png" alt="Logo Students Power"></a></div>
-            <div id="langue1"><a href="../English/Home.html"><img src="../photo/angleterre.png" alt="langue angleterre"></a></div>
-            <div id="langue2"><a href="../Español/Recepcion.html"><img src="../photo/espagne.png" alt="langue espagne"></a></div>
-            <input class="checkbox" type="checkbox" name="menu" id="menu">
-            <div class="hamburger"><span class="line line1"></span><span class="line line2"></span><span class="line line3"></span></div>  
-            <div id="forum"><a href="Forum.html"><p>Forum</p></a></div>
-            <div id="connection"><a href="Connexion.php"><p>Se connecter</p></a></div>
-            <div id="inscription"><a href="Inscription.php"><p>S'inscrire</p></a></div>
-            <div id="orientation"><a href="Orientation.html"><p>Orientation</p></a></div>
-        </header>
+    <header>
+        <nav class="container">
+            <div class="logo"><a href="index.html">Ton Nom</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="recherche.html">Recherche</a></li>
+                <li><a href="agregation.html">Agrégation</a></li>
+                <li><a href="files/CV.pdf" target="_blank">CV (PDF)</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="corp">
-            <div class="titre">
-                <p>Bienvenue</p>
+    <main class="container">
+        <section class="hero">
+            <h1>Doctorant en Mathématiques</h1>
+            <p class="subtitle">Laboratoire de Mathématiques / Université</p>
+            <p>
+                Bienvenue sur ma page personnelle. Je suis doctorant en mathématiques pures/appliquées. 
+                Mes travaux de recherche portent principalement sur les processus ponctuels de Poisson, les lois stables et la géométrie stochastique.
+            </p>
+        </section>
+
+        <section class="card-grid">
+            <div class="card">
+                <h2>Recherche</h2>
+                <p>Découvrez mes travaux, preprints et publications récentes autour des champs de shot-noise et processus stochastiques.</p>
+                <a href="recherche.html" class="btn">En savoir plus &rarr;</a>
             </div>
-            <div class="text">
-                <p>Chers étudiants et élèves, vous souhaitez vous améliorer, vous entraider en travaillant librement dans la joie et la bonne humeur. 
-                    Notre site est conçu spécialement pour vous et vous permettra de vous mettre en relation avec d'autres étudiants sous la forme d'un forum et de cours particulier.
-                    <br><br>De plus, nous mettons à disposition les outils les plus importants et nous centralisons les notions essentielles dans les divers enseignements pour travailler dans les meilleures conditions.<br><br>
-                    Pour n'importe quelle question n'hésitez pas à nous contacter. Il ne vous reste plus qu'à vous inscrire ;)
-                </p>
+
+            <div class="card">
+                <h2>Agrégation de Mathématiques</h2>
+                <p>Retrouvez mes plans de leçons, développements et notes de révision pour l'Agrégation externe.</p>
+                <a href="agregation.html" class="btn">Voir les ressources &rarr;</a>
             </div>
-            <div class="image">
-                <p><img src="../photo/imageacueil.gif" alt="imageacueil"></p>
-            </div>
-            <div id="video">
-                <iframe src="https://www.youtube.com/embed/uxtFlWZmbeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 - Ton Nom | Hébergé sur GitHub Pages</p>
         </div>
+    </footer>
 
-        <footer>
-            
-            <div id="C1L1">
-                <p>Nous contacter</p>
-            </div>
-
-            
-
-            <div id="C1L3">
-                <p id="mail"><a href="mailto:studentspowerofwork@gmail.com?subject=Nous&nbsp;Contacter"><img src="../photo/mail.png" alt="mail"></a></p>
-                <p id="logoyoutube"><a href="https://www.youtube.com/channel/UCdYaYwZWrbSP0Fru2YxkO5w" target="_blank"><img src="../photo/logo/logoyoutube.png" alt="logoyoutube"></a></p>
-                <p id="logoinstagrame"><a href="https://instagram.com/studentspowerofwork?utm_medium=copy_link" target="_blank"><img src="../photo/logo/logoinstagrame.png" alt="logoinstagrame"></a></p>
-            </div>
-            
-            
-            <div id="L4"><p><a href="Mentionslegales.html">Mentions légales</a> et <a href="CGU.html">Les Conditions Générales d'Utilisation</a></p></div>
-        </footer>   
-    </body>
+</body>
 </html>
