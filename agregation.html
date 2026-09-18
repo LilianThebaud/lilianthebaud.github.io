@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agrégation - Lilian THÉBAUD</title>
     <link rel="stylesheet" href="style_css/style.css">
-    <link rel="stylesheet" href="style_css/style_agregation.css">
 
     <!-- Support de LaTeX dans le navigateur via MathJax -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -33,62 +32,94 @@
     <main class="container">
         <section class="page-title">
             <h1>Agrégation Externe de Mathématiques</h1>
-            <p class="subtitle">Plans de leçons, développements et notes de révision</p>
+            <p class="subtitle">Plans de leçons et développements partagés (Session 2023)</p>
         </section>
 
         <!-- Barre de recherche et filtres -->
         <section class="search-section">
             <div class="search-box">
-                <input type="text" id="lesson-search" placeholder="Rechercher une leçon, un développement, un numéro..." onkeyup="filterLessons()">
+                <input type="text" id="lesson-search" placeholder="Rechercher une leçon, un développement, un ouvrage (Berthelin, Gourdon, Garet-Kurtzmann)..." onkeyup="filterLessons()">
                 <div class="filter-buttons">
-                    <button class="filter-btn active" onclick="filterCategory('all', this)">Tous</button>
-                    <button class="filter-btn" onclick="filterCategory('algebre', this)">Algèbre & Géométrie</button>
+                    <button class="filter-btn active" onclick="filterCategory('all', this)">Toutes</button>
                     <button class="filter-btn" onclick="filterCategory('analyse', this)">Analyse & Probabilités</button>
+                    <button class="filter-btn" onclick="filterCategory('algebre', this)">Algèbre & Géométrie</button>
                 </div>
             </div>
         </section>
 
-        <!-- Liste des leçons -->
+        <!-- Liste des leçons basées sur Agreg-Maths -->
         <section class="lessons-grid" id="lessons-list">
 
-            <!-- Exemple Leçon 1 -->
-            <div class="lesson-card" data-category="algebre">
+            <!-- Leçon 228 -->
+            <div class="lesson-card" data-category="analyse">
                 <div class="lesson-header">
-                    <span class="lesson-num">Leçon 101</span>
-                    <span class="badge algebre">Algèbre</span>
+                    <span class="lesson-num">Leçon 228</span>
+                    <span class="badge analyse">Analyse</span>
                 </div>
-                <h3>Groupe d'isométries d'une figure plane ou d'un solide</h3>
-                <p class="lesson-devs"><strong>Développements :</strong> Table de caractères de $S_4$, Isométries du tétraèdre.</p>
+                <h3>Continuité, dérivabilité des fonctions réelles d'une variable réelle</h3>
+                <p class="lesson-devs"><strong>Développements :</strong> Méthode de Newton, Théorème de Weierstrass (preuve probabiliste).</p>
+                <p class="lesson-refs"><em>Réf : Gourdon, Garet-Kurtzmann, Ramis-Warusfel, Rouvière.</em></p>
                 <div class="lesson-links">
-                    <a href="files/agreg/101_plan.pdf" target="_blank">📄 Plan (PDF)</a>
-                    <a href="files/agreg/101_dev1.pdf" target="_blank">📝 Dev 1</a>
+                    <a href="files/agreg/Lecon_228.pdf" target="_blank">📄 Plan (PDF)</a>
+                    <a href="files/agreg/Methode_de_Newton.pdf" target="_blank">📝 Méthode de Newton</a>
+                    <a href="files/agreg/Weierstrass_probabiliste.pdf" target="_blank">📝 Weierstrass</a>
                 </div>
             </div>
 
-            <!-- Exemple Leçon 2 -->
+            <!-- Leçon 221 -->
             <div class="lesson-card" data-category="analyse">
                 <div class="lesson-header">
-                    <span class="lesson-num">Leçon 226</span>
+                    <span class="lesson-num">Leçon 221</span>
                     <span class="badge analyse">Analyse</span>
                 </div>
-                <h3>Suites de variables aléatoires indépendantes et de même loi</h3>
-                <p class="lesson-devs"><strong>Développements :</strong> Loi forte des grands nombres, Théorème central limite.</p>
+                <h3>Équations différentielles linéaires. Systèmes d'équations différentielles linéaires</h3>
+                <p class="lesson-devs"><strong>Développements :</strong> Équation de Bessel, Stabilité des systèmes différentiels.</p>
+                <p class="lesson-refs"><em>Réf : Berthelin, Demailly, Zuily-Queffélec.</em></p>
                 <div class="lesson-links">
-                    <a href="files/agreg/226_plan.pdf" target="_blank">📄 Plan (PDF)</a>
-                    <a href="files/agreg/226_dev1.pdf" target="_blank">📝 TCL</a>
+                    <a href="files/agreg/Lecon_221.pdf" target="_blank">📄 Plan (PDF)</a>
+                    <a href="files/agreg/Equation_de_Bessel.pdf" target="_blank">📝 Équation de Bessel</a>
                 </div>
             </div>
 
-            <!-- Exemple Leçon 3 -->
+            <!-- Leçon 229 -->
             <div class="lesson-card" data-category="analyse">
                 <div class="lesson-header">
-                    <span class="lesson-num">Leçon 236</span>
+                    <span class="lesson-num">Leçon 229</span>
                     <span class="badge analyse">Analyse</span>
                 </div>
-                <h3>Espaces de Hilbert. Bases hilbertiennes. Exemples</h3>
-                <p class="lesson-devs"><strong>Développements :</strong> Projection sur un convexe fermé, Surjectivité de l'exponentielle matricielle.</p>
+                <h3>Fonctions monotones. Fonctions convexes. Exemples et applications</h3>
+                <p class="lesson-devs"><strong>Développements :</strong> Théorème de Brun-Minkowski, Inégalité de Jensen & applications.</p>
+                <p class="lesson-refs"><em>Réf : Gourdon, Hirsch-Lacombe.</em></p>
                 <div class="lesson-links">
-                    <a href="files/agreg/236_plan.pdf" target="_blank">📄 Plan (PDF)</a>
+                    <a href="files/agreg/Lecon_229.pdf" target="_blank">📄 Plan (PDF)</a>
+                </div>
+            </div>
+
+            <!-- Leçon 239 -->
+            <div class="lesson-card" data-category="analyse">
+                <div class="lesson-header">
+                    <span class="lesson-num">Leçon 239</span>
+                    <span class="badge analyse">Analyse</span>
+                </div>
+                <h3>Fonctions définies par une intégrale dépendant d'un paramètre</h3>
+                <p class="lesson-devs"><strong>Développements :</strong> Formule de Stirling via méthode de la phase stasionnaire / Laplace, Intégrale de Gauss.</p>
+                <p class="lesson-refs"><em>Réf : Garet-Kurtzmann, Briane-Pagès.</em></p>
+                <div class="lesson-links">
+                    <a href="files/agreg/Lecon_239.pdf" target="_blank">📄 Plan (PDF)</a>
+                </div>
+            </div>
+
+            <!-- Leçon 201 -->
+            <div class="lesson-card" data-category="analyse">
+                <div class="lesson-header">
+                    <span class="lesson-num">Leçon 201</span>
+                    <span class="badge analyse">Analyse</span>
+                </div>
+                <h3>Espaces de fonctions. Exemples et applications</h3>
+                <p class="lesson-devs"><strong>Développements :</strong> Théorème d'Ascoli, Densité des polynômes d'interpolation.</p>
+                <p class="lesson-refs"><em>Réf : Hirsch-Lacombe, Queffélec.</em></p>
+                <div class="lesson-links">
+                    <a href="files/agreg/Lecon_201.pdf" target="_blank">📄 Plan (PDF)</a>
                 </div>
             </div>
 
@@ -101,7 +132,7 @@
         </div>
     </footer>
 
-    <!-- Script JS pour la recherche en temps réel -->
+    <!-- Script de filtrage en temps réel -->
     <script>
         let currentCategory = 'all';
 
