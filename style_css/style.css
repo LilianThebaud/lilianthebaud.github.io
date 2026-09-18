@@ -22,9 +22,9 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1200px; /* Augmente la largeur max (tu peux mettre 1400px ou 95% si tu veux encore plus large) */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;   /* Ajoute un peu plus de marge sur les côtés */
 }
 
 /* Header & Navigation */
