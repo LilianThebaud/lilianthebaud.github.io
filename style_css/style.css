@@ -1,11 +1,11 @@
 /* Variables de couleurs sobres et modernes */
 :root {
-    --primary-color: #1a365d;   /* Bleu académique sombre */
-    --accent-color: #2b6cb0;    /* Bleu clair pour liens/boutons */
-    --bg-color: #f7fafc;        /* Fond très légèrement gris/bleu */
+    --primary-color: #1e3a2b;   /* Vert forêt profond pour les titres majeurs */
+    --accent-color: #2e6f40;    /* Vert sauge/végétal pour les sous-titres et liens */
+    --bg-color: #f6f8f6;        /* Fond blanc cassé très légèrement teinté de vert/gris */
     --card-bg: #ffffff;        /* Blanc pur pour les cartes */
-    --text-color: #2d3748;      /* Gris foncé pour un meilleur confort de lecture */
-    --border-color: #e2e8f0;
+    --text-color: #2d3748;      /* Gris foncé pour un confort de lecture optimal */
+    --border-color: #e2e8f0;    /* Bordures discrètes */
 }
 
 * {
