@@ -128,3 +128,9 @@
 .lesson-links a:hover {
     text-decoration: underline;
 }
+
+.lesson-refs {
+    font-size: 0.82rem;
+    color: #64748b;
+    margin-bottom: 12px;
+}
