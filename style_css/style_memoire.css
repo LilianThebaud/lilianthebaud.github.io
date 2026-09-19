@@ -1,133 +1,124 @@
-/* Alignement du lien de retour */
+/* Styles spécifiques à la page Mémoire */
+.page-memoire {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
 .back-nav {
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 .back-btn {
     display: inline-block;
-    color: var(--accent-color);
+    color: #2b6cb0;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+    font-weight: 600;
 }
 
 .back-btn:hover {
-    color: var(--primary-color);
+    text-decoration: underline;
 }
 
-/* En-tête du mémoire */
-.memo-detail header {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
+.memo-box {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 8px;
     padding: 30px;
     margin-bottom: 25px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
-.memo-detail header h1 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
+.memo-title-box h1 {
+    font-size: 1.75rem;
+    color: #1a202c;
+    margin-top: 0;
     margin-bottom: 15px;
     line-height: 1.3;
 }
 
-.memo-detail .meta p {
-    margin-bottom: 6px;
+.memo-meta {
+    border-top: 1px solid #edf2f7;
+    padding-top: 15px;
+    color: #4a5568;
     font-size: 0.95rem;
-    color: #718096;
 }
 
-.memo-detail .meta strong {
-    color: var(--text-color);
+.memo-meta p {
+    margin: 4px 0;
 }
 
-/* Sections de contenu */
-.memo-detail section {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 30px;
-    margin-bottom: 25px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-}
-
-.memo-detail h2 {
-    font-size: 1.35rem;
-    color: var(--primary-color);
+.memo-box h2 {
+    font-size: 1.3rem;
+    color: #2b6cb0;
+    margin-top: 0;
     margin-bottom: 15px;
-    border-bottom: 2px solid var(--bg-color);
+    border-bottom: 2px solid #edf2f7;
     padding-bottom: 8px;
 }
 
-/* Listes numérotées et sous-listes */
-.memo-detail ol {
+.memo-box ol {
     margin-left: 20px;
+    padding-left: 0;
+}
+
+.memo-box ol > li {
     margin-bottom: 15px;
+    font-weight: 600;
+    color: #2d3748;
 }
 
-.memo-detail ol > li {
-    margin-bottom: 15px;
-    color: var(--text-color);
-}
-
-.memo-detail ol > li > strong {
-    color: var(--primary-color);
-}
-
-.memo-detail ul {
+.memo-box ul {
     list-style-type: disc;
     margin-left: 20px;
-    margin-top: 8px;
-}
-
-.memo-detail ul li {
-    margin-bottom: 5px;
+    margin-top: 5px;
     font-weight: normal;
+    color: #4a5568;
 }
 
-/* Galerie d'illustrations */
-.gallery {
+.memo-box ul li {
+    margin-bottom: 4px;
+}
+
+.gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
-.card-img {
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
+.gallery-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
     overflow: hidden;
     background: #fff;
 }
 
-.card-img img {
+.gallery-item img {
     width: 100%;
     height: 180px;
     object-fit: cover;
     display: block;
 }
 
-.card-img .caption {
-    padding: 12px;
+.gallery-item .caption {
+    padding: 10px;
     font-size: 0.85rem;
-    color: #718096;
+    color: #4a5568;
 }
 
-/* Mots-clés / Badges */
-.keywords-list {
+.tags-container {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 10px;
 }
 
-.badge {
-    background-color: var(--bg-color);
-    color: var(--accent-color);
-    border: 1px solid var(--border-color);
-    padding: 5px 12px;
-    border-radius: 20px;
+.tag-badge {
+    background-color: #edf2f7;
+    color: #2b6cb0;
+    border: 1px solid #cbd5e0;
+    padding: 4px 12px;
+    border-radius: 15px;
     font-size: 0.85rem;
-    font-weight: 500;
 }
