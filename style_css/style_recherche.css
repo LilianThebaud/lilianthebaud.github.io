@@ -44,6 +44,16 @@
     font-size: 1.15rem;
 }
 
+.paper-header a {
+    color: var(--primary-color);
+    font-size: 1.15rem;
+    transition: color 0.2s;
+}
+
+.paper-header a:hover, .paper-header a.active {
+    color: var(--accent-color);
+}
+
 .paper-date, .paper-status {
     background-color: #e2ece4;
     color: var(--accent-color);
