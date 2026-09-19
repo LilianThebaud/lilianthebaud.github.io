@@ -21,6 +21,24 @@ body {
   margin: 0 auto;
 }
 
+/* Bouton de retour */
+.back-nav {
+  margin-bottom: 1.5rem;
+}
+
+.back-btn {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+/* Fiche mémoire */
 header {
   background: var(--card-bg);
   padding: 2rem;
@@ -35,12 +53,10 @@ h1 {
   margin-top: 0;
 }
 
-.meta {
-  font-size: 0.95rem;
+.meta p {
+  margin: 0.3rem 0;
   color: #64748b;
-  border-top: 1px solid var(--border);
-  padding-top: 1rem;
-  margin-top: 1rem;
+  font-size: 0.95rem;
 }
 
 section {
@@ -58,7 +74,7 @@ h2 {
   margin-top: 0;
 }
 
-/* Styles de la Galerie d'Illustrations */
+/* Galerie */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -86,7 +102,7 @@ h2 {
   color: #475569;
 }
 
-/* Badges Mots-clés */
+/* Badges */
 .keywords-list {
   display: flex;
   flex-wrap: wrap;
