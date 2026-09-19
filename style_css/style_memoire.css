@@ -12,7 +12,7 @@
 
 .back-btn {
     display: inline-block;
-    color: #2b6cb0;
+    color: var(--accent-color);
     text-decoration: none;
     font-weight: 600;
 }
@@ -50,7 +50,7 @@
 
 .memo-box h2 {
     font-size: 1.3rem;
-    color: #2b6cb0;
+    color: var(--accent-color);
     margin-top: 0;
     margin-bottom: 15px;
     border-bottom: 2px solid #edf2f7;
@@ -115,7 +115,7 @@
 
 .tag-badge {
     background-color: #edf2f7;
-    color: #2b6cb0;
+    color: var(--accent-color);
     border: 1px solid #cbd5e0;
     padding: 4px 12px;
     border-radius: 15px;
