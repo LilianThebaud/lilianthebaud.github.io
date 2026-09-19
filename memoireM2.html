@@ -5,19 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Limites d'échelle des champs de type shot-noise — Lilian THÉBAUD</title>
     
+    <!-- CSS Général du site -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style_memoire.css">
     
-    <!-- MathJax pour le rendu des formules LaTeX -->
+    <!-- MathJax pour les formules LaTeX -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        /* Styles spécifiques à la page Mémoire */
+        .page-memoire {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 15px;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .back-nav {
+            margin-bottom: 20px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            color: #2b6cb0;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-btn:hover {
+            text-decoration: underline;
+        }
+
+        .memo-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .memo-title-box h1 {
+            font-size: 1.75rem;
+            color: #1a202c;
+            margin-top: 0;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .memo-meta {
+            border-top: 1px solid #edf2f7;
+            padding-top: 15px;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        .memo-meta p {
+            margin: 4px 0;
+        }
+
+        .memo-box h2 {
+            font-size: 1.3rem;
+            color: #2b6cb0;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 8px;
+        }
+
+        .memo-box ol {
+            margin-left: 20px;
+            padding-left: 0;
+        }
+
+        .memo-box ol > li {
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .memo-box ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-top: 5px;
+            font-weight: normal;
+            color: #4a5568;
+        }
+
+        .memo-box ul li {
+            margin-bottom: 4px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .gallery-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item .caption {
+            padding: 10px;
+            font-size: 0.85rem;
+            color: #4a5568;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag-badge {
+            background-color: #edf2f7;
+            color: #2b6cb0;
+            border: 1px solid #cbd5e0;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <nav class="container">
             <div class="logo"><a href="index.html">Lilian THÉBAUD</a></div>
             
-            <!-- Case à cocher masquée et bouton hamburger -->
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-btn">&#9776;</label>
     
@@ -31,111 +158,112 @@
         </nav>
     </header>
 
-    <div class="container">
+    <main class="page-memoire">
 
-        <!-- Bouton de retour vers la recherche -->
         <nav class="back-nav">
             <a href="recherche.html" class="back-btn">&larr; Retour aux résultats de recherche</a>
         </nav>
 
-        <!-- Fiche détaillée du mémoire -->
-        <article class="memo-detail">
-            <div class="memo-header">
-                <h1>Limites d'échelle des champs de type shot-noise associés à un processus ponctuel de Poisson homogène</h1>
-                <div class="meta">
-                    <p><strong>Auteur :</strong> Lilian THÉBAUD</p>
-                    <p><strong>Encadrement :</strong> Hermine BIERMÉ &amp; Olivier DURIEU</p>
-                    <p><strong>Diplôme :</strong> Master 2 Mathématiques (Université de Tours, 2025–2026)</p>
+        <!-- En-tête de la fiche -->
+        <div class="memo-box memo-title-box">
+            <h1>Limites d'échelle des champs de type shot-noise associés à un processus ponctuel de Poisson homogène</h1>
+            <div class="memo-meta">
+                <p><strong>Auteur :</strong> Lilian THÉBAUD</p>
+                <p><strong>Encadrement :</strong> Hermine BIERMÉ &amp; Olivier DURIEU</p>
+                <p><strong>Diplôme :</strong> Master 2 Mathématiques (Université de Tours, 2025–2026)</p>
+            </div>
+        </div>
+
+        <!-- Résumé -->
+        <div class="memo-box">
+            <h2>Résumé du projet</h2>
+            <p>
+                Ce travail de mémoire porte sur l'analyse asymptotique et l'étude des <strong>limites d'échelle de champs aléatoires de type shot-noise</strong>. Ces champs modélisent l'accumulation d'impulsions aléatoires réparties dans l'espace, modulées par une fonction de réponse déterministe \( l \) et pondérées par des amplitudes aléatoires \((Y_n)\).
+            </p>
+            <p>
+                L'objectif principal est de déterminer le comportement du champ centré et normalisé \(\tilde{I}_{\lambda}(z)\) lorsque l'intensité \(\lambda\) du processus de Poisson sous-jacent tend vers l'infini.
+            </p>
+        </div>
+
+        <!-- Résultats -->
+        <div class="memo-box">
+            <h2>Principaux résultats</h2>
+            <ol>
+                <li>
+                    Théorie de Karamata &amp; Variation Régulière
+                    <ul>
+                        <li>Étude approfondie des fonctions à variation lente et régulière (théorèmes de convergence uniforme, de caractérisation, de représentation de Karamata et inégalité de Potter).</li>
+                        <li>Utilisation du concept d'<strong>inverse asymptotique</strong> pour déterminer les bornes et échelles de normalisation adaptées.</li>
+                    </ul>
+                </li>
+                <li>
+                    Régime Gaussien (Second moment fini : \(\mathbb{E}[Y_1^2] < \infty\))
+                    <ul>
+                        <li>Preuve de la convergence en loi (au sens des distributions de dimension finie) vers un <strong>champ aléatoire gaussien centré</strong> sous une normalisation en \(g(\lambda) = \sqrt{\lambda}\).</li>
+                        <li>Démonstration détaillée par deux méthodes indépendantes : via la <strong>transformée de Laplace</strong> et via la <strong>fonction caractéristique</strong>.</li>
+                    </ul>
+                </li>
+                <li>
+                    Régime \(\alpha\)-Stable (Amplitudes à variation régulière : \(\alpha \in (1,2)\))
+                    <ul>
+                        <li>Étude du cas où les amplitudes présentent des queues lourdes (\(\mathbb{E}[Y_1^2] = +\infty\)) avec une queue de distribution \(\overline{F_Y}\) à variation régulière d'indice \(\alpha\).</li>
+                        <li>Démonstration de la convergence finie-dimensionnelle vers un <strong>champ aléatoire \(\alpha\)-stable</strong> en utilisant l'inverse asymptotique de \(1/\overline{F_Y}\) pour la normalisation \(g(\lambda)\).</li>
+                    </ul>
+                </li>
+                <li>
+                    Simulations Numériques
+                    <ul>
+                        <li>Implémentation en Python de simulations spatiales permettant de visualiser et d'illustrer la transition entre le régime gaussien et le régime stable non gaussien.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Galerie -->
+        <div class="memo-box">
+            <h2>Simulations &amp; Illustrations</h2>
+            <p>Aperçu des simulations stochastiques développées en Python pour observer les transitions de régimes :</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/simu-gaussien.png" alt="Simulation champ Gaussien">
+                    <div class="caption">
+                        <strong>Régime Gaussien :</strong> Simulation spatiale du champ shot-noise sous normalisation \(g(\lambda) = \sqrt{\lambda}\).
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/simu-stable.png" alt="Simulation champ Alpha-stable">
+                    <div class="caption">
+                        <strong>Régime \(\alpha\)-Stable :</strong> Champ présentant des sauts d'amplitudes à queues lourdes (\(\alpha = 1.5\)).
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/karamata.png" alt="Convergence asymptotique">
+                    <div class="caption">
+                        <strong>Analyse Asymptotique :</strong> Illustration de l'inverse asymptotique de Karamata selon l'intensité \(\lambda\).
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <section>
-                <h2>Résumé du projet</h2>
-                <p>
-                    Ce travail de mémoire porte sur l'analyse asymptotique et l'étude des <strong>limites d'échelle de champs aléatoires de type shot-noise</strong>. Ces champs modélisent l'accumulation d'impulsions aléatoires réparties dans l'espace, modulées par une fonction de réponse déterministe \( l \) et pondérées par des amplitudes aléatoires \((Y_n)\).
-                </p>
-                <p>
-                    L'objectif principal est de déterminer le comportement du champ centré et normalisé \(\tilde{I}_{\lambda}(z)\) lorsque l'intensité \(\lambda\) du processus de Poisson sous-jacent tend vers l'infini.
-                </p>
-            </section>
+        <!-- Mots-clés -->
+        <div class="memo-box">
+            <h2>Mots-clés</h2>
+            <div class="tags-container">
+                <span class="tag-badge">Processus ponctuel de Poisson</span>
+                <span class="tag-badge">Champ shot-noise</span>
+                <span class="tag-badge">Limites d'échelle</span>
+                <span class="tag-badge">Théorie de Karamata</span>
+                <span class="tag-badge">Variation régulière</span>
+                <span class="tag-badge">Champ Gaussien</span>
+                <span class="tag-badge">Lois \(\alpha\)-stables</span>
+                <span class="tag-badge">Simulations stochastiques</span>
+            </div>
+        </div>
 
-            <section>
-                <h2>Principaux résultats</h2>
-                <ol>
-                    <li>
-                        <strong>Théorie de Karamata &amp; Variation Régulière</strong>
-                        <ul>
-                            <li>Étude approfondie des fonctions à variation lente et régulière (théorèmes de convergence uniforme, de caractérisation, de représentation de Karamata et inégalité de Potter).</li>
-                            <li>Utilisation du concept d'<strong>inverse asymptotique</strong> pour déterminer les bornes et échelles de normalisation adaptées.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Régime Gaussien (Second moment fini : \(\mathbb{E}[Y_1^2] < \infty\))</strong>
-                        <ul>
-                            <li>Preuve de la convergence en loi (au sens des distributions de dimension finie) vers un <strong>champ aléatoire gaussien centré</strong> sous une normalisation en \(g(\lambda) = \sqrt{\lambda}\).</li>
-                            <li>Démonstration détaillée par deux méthodes indépendantes : via la <strong>transformée de Laplace</strong> et via la <strong>fonction caractéristique</strong>.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Régime \(\alpha\)-Stable (Amplitudes à variation régulière : \(\alpha \in (1,2)\))</strong>
-                        <ul>
-                            <li>Étude du cas où les amplitudes présentent des queues lourdes (\(\mathbb{E}[Y_1^2] = +\infty\)) avec une queue de distribution \(\overline{F_Y}\) à variation régulière d'indice \(\alpha\).</li>
-                            <li>Démonstration de la convergence finie-dimensionnelle vers un <strong>champ aléatoire \(\alpha\)-stable</strong> en utilisant l'inverse asymptotique de \(1/\overline{F_Y}\) pour la normalisation \(g(\lambda)\).</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Simulations Numériques</strong>
-                        <ul>
-                            <li>Implémentation en Python de simulations spatiales permettant de visualiser et d'illustrer la transition entre le régime gaussien et le régime stable non gaussien.</li>
-                        </ul>
-                    </li>
-                </ol>
-            </section>
-
-            <section>
-                <h2>Simulations &amp; Illustrations</h2>
-                <p>Aperçu des simulations stochastiques développées en Python pour observer les transitions de régimes :</p>
-
-                <div class="gallery">
-                    <div class="card-img">
-                        <img src="images/simu-gaussien.png" alt="Simulation champ Gaussien">
-                        <div class="caption">
-                            <strong>Régime Gaussien :</strong> Simulation spatiale du champ shot-noise sous normalisation \(g(\lambda) = \sqrt{\lambda}\).
-                        </div>
-                    </div>
-
-                    <div class="card-img">
-                        <img src="images/simu-stable.png" alt="Simulation champ Alpha-stable">
-                        <div class="caption">
-                            <strong>Régime \(\alpha\)-Stable :</strong> Champ présentant des sauts d'amplitudes à queues lourdes (\(\alpha = 1.5\)).
-                        </div>
-                    </div>
-
-                    <div class="card-img">
-                        <img src="images/karamata.png" alt="Convergence asymptotique">
-                        <div class="caption">
-                            <strong>Analyse Asymptotique :</strong> Illustration de l'inverse asymptotique de Karamata selon l'intensité \(\lambda\).
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2>Mots-clés</h2>
-                <div class="keywords-list">
-                    <span class="badge">Processus ponctuel de Poisson</span>
-                    <span class="badge">Champ shot-noise</span>
-                    <span class="badge">Limites d'échelle</span>
-                    <span class="badge">Théorie de Karamata</span>
-                    <span class="badge">Variation régulière</span>
-                    <span class="badge">Champ Gaussien</span>
-                    <span class="badge">Lois \(\alpha\)-stables</span>
-                    <span class="badge">Simulations stochastiques</span>
-                </div>
-            </section>
-        </article>
-
-    </div>
+    </main>
 
 </body>
 </html>
