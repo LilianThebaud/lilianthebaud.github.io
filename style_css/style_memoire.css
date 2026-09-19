@@ -31,7 +31,7 @@
 
 .memo-title-box h1 {
     font-size: 1.75rem;
-    color: #1a202c;
+    color: var(--primary-color);
     margin-top: 0;
     margin-bottom: 15px;
     line-height: 1.3;
