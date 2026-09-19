@@ -52,10 +52,21 @@
         <div class="memo-box">
             <h2>Résumé du projet</h2>
             <p>
-                Ce travail de mémoire porte sur l'analyse asymptotique et l'étude des <strong>limites d'échelle de champs aléatoires de type shot-noise</strong>. Ces champs modélisent l'accumulation d'impulsions aléatoires réparties dans l'espace, modulées par une fonction de réponse déterministe \( l \) et pondérées par des amplitudes aléatoires \((Y_n)\).
+                Ce travail de mémoire porte sur l'analyse asymptotique et l'étude des <strong>limites d'échelle de champs aléatoires de type shot-noise</strong>. Ces champs modélisent l'accumulation d'impulsions aléatoires réparties dans l'espace.
             </p>
             <p>
-                L'objectif principal est de déterminer le comportement du champ centré et normalisé \(\tilde{I}_{\lambda}(z)\) lorsque l'intensité \(\lambda\) du processus de Poisson sous-jacent tend vers l'infini.
+                Pour une intensité \(\lambda > 0\), le champ shot-noise \(I_\lambda(z)\) est défini pour tout \(z \in \mathbb{R}^d\) par :
+                \[
+                I_\lambda(z) = \sum_{n=1}^{+\infty} Y_n \, l(z - X_n)
+                \]
+                où \(\Phi_\lambda = \{X_n\}_{n \ge 1}\) est un processus ponctuel de Poisson homogène sur \(\mathbb{R}^d\) d'intensité \(\lambda\), \((Y_n)_{n \ge 1}\) est une suite de variables aléatoires réelles indépendantes et identiquement distribuées (i.i.d.), indépendantes de \(\Phi_\lambda\), et \(l : \mathbb{R}^d \to \mathbb{R}\) est une fonction de réponse déterministe mesurable.
+            </p>
+            <p>
+                L'objectif principal est de déterminer le comportement asymptotique du champ centré et normalisé :
+                \[
+                \tilde{I}_{\lambda}(z) = \frac{I_\lambda(z) - \mathbb{E}[I_\lambda(z)]}{g(\lambda)}
+                \]
+                lorsque l'intensité \(\lambda\) tend vers l'infini, selon les propriétés d'intégrabilité de la fonction kernel \(l\) et la loi des amplitudes \(Y_n\).
             </p>
         </div>
 
