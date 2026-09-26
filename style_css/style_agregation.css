@@ -164,3 +164,32 @@
   margin-top: 8px;   /* Réintroduit la marge quand le paragraphe est visible */
   margin-bottom: 8px;
 }
+
+/* Alignement en ligne des plans et développements */
+.lesson-card div:last-child,
+.lesson-links {
+  display: flex;
+  flex-direction: row;      /* Force l'affichage horizontal */
+  flex-wrap: wrap;           /* Permet le retour à la ligne si l'écran est petit */
+  align-items: center;
+  gap: 12px;                 /* Espacement horizontal entre le plan et chaque dév */
+  margin-top: 10px;
+}
+
+/* Style optionnel des liens pour un rendu propre sous forme de boutons */
+.lesson-card div:last-child a,
+.lesson-links a {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;       /* Évite de couper le titre d'un dév au milieu */
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #f1f5f9; /* Couleur de fond légère */
+  transition: background-color 0.2s ease;
+}
+
+.lesson-card div:last-child a:hover,
+.lesson-links a:hover {
+  background-color: #e2e8f0;
+}
