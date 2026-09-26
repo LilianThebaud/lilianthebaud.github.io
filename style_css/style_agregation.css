@@ -198,29 +198,30 @@
   margin-bottom: 8px;
 }
 
-/* 3. Liens (Plan + Développements) alignés en ligne et bloqués en bas */
+/* 1. Conteneur des boutons (Plan + Développements) */
 .lesson-card div:last-child,
 .lesson-links {
-  margin-top: auto;          /* Pousse les liens vers le bas même en cas de contenu court */
-  display: flex;
-  flex-direction: row;       /* Alignement en ligne */
-  flex-wrap: wrap;            /* Gestion propre des écrans plus petits */
-  align-items: center;
-  gap: 10px;                  /* Espacement entre plan et dévs */
-  padding-top: 10px;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important; /* Autorise les boutons à passer à la ligne suivante */
+  gap: 8px !important;       /* Espacement entre les boutons */
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-top: auto !important; /* Maintient le tout en bas de la carte */
 }
 
-/* Style des liens en ligne */
+/* 2. Style des boutons (liens) */
 .lesson-card div:last-child a,
 .lesson-links a {
   display: inline-flex;
   align-items: center;
-  white-space: nowrap;
-  text-decoration: none;
-  padding: 4px 8px;
-  border-radius: 4px;
-  background-color: #f1f5f9;
-  transition: background-color 0.2s ease;
+  max-width: 100% !important;   /* Empêche le bouton de dépasser de la carte */
+  white-space: normal !important;/* Permet au texte long de passer à la ligne DANS le bouton */
+  word-break: break-word;        /* Coupe le texte si un mot est trop long */
+  padding: 6px 10px;
+  border-radius: 6px;
+  line-height: 1.3;
+  box-sizing: border-box;
 }
 
 .lesson-card div:last-child a:hover,
