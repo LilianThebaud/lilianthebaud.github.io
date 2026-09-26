@@ -165,30 +165,68 @@
   margin-bottom: 8px;
 }
 
-/* Alignement en ligne des plans et développements */
-.lesson-card div:last-child,
-.lesson-links {
+/* 1. La carte devient un conteneur Flex vertical */
+.lesson-card {
   display: flex;
-  flex-direction: row;      /* Force l'affichage horizontal */
-  flex-wrap: wrap;           /* Permet le retour à la ligne si l'écran est petit */
-  align-items: center;
-  gap: 12px;                 /* Espacement horizontal entre le plan et chaque dév */
-  margin-top: 10px;
+  flex-direction: column;
+  justify-content: space-between; /* Pousse le dernier élément (les liens) tout en bas */
+  height: 100%;                  /* Assure que toutes les cartes ont la même hauteur si dans une grille */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
 }
 
-/* Style optionnel des liens pour un rendu propre sous forme de boutons */
+.lesson-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+
+/* 2. Références (affichées uniquement au survol) */
+.lesson-card p {
+  opacity: 0;
+  max-height: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease, margin 0.3s ease;
+}
+
+.lesson-card:hover p {
+  opacity: 1;
+  max-height: 100px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* 3. Liens (Plan + Développements) alignés en ligne et bloqués en bas */
+.lesson-card div:last-child,
+.lesson-links {
+  margin-top: auto;          /* Pousse les liens vers le bas même en cas de contenu court */
+  display: flex;
+  flex-direction: row;       /* Alignement en ligne */
+  flex-wrap: wrap;            /* Gestion propre des écrans plus petits */
+  align-items: center;
+  gap: 10px;                  /* Espacement entre plan et dévs */
+  padding-top: 10px;
+}
+
+/* Style des liens en ligne */
 .lesson-card div:last-child a,
 .lesson-links a {
   display: inline-flex;
   align-items: center;
-  white-space: nowrap;       /* Évite de couper le titre d'un dév au milieu */
+  white-space: nowrap;
   text-decoration: none;
   padding: 4px 8px;
   border-radius: 4px;
-  background-color: #f1f5f9; /* Couleur de fond légère */
+  background-color: #f1f5f9;
   transition: background-color 0.2s ease;
 }
 
+.lesson-card div:last-child a:hover,
+.lesson-links a:hover {
+  background-color: #e2e8f0;
+}
 .lesson-card div:last-child a:hover,
 .lesson-links a:hover {
   background-color: #e2e8f0;
