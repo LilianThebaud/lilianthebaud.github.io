@@ -127,6 +127,11 @@
     color: var(--accent-color);
 }
 
+.badge.probabilites {
+    background-color: #fff3e0; /* Fond orange très doux */
+    color: #e65100;            /* Texte orange foncé pour un bon contraste */
+}
+
 .lesson-card h3 {
     font-size: 1.05rem;
     margin-bottom: 10px;
