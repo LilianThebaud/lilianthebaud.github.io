@@ -118,3 +118,68 @@
   background-color: #e2e8f0;
   text-decoration: none !important; /* Aucun soulignage au survol */
 }
+
+/* Section Recherche & Filtres */
+.search-section {
+  margin-bottom: 25px;
+}
+
+.search-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Style de la barre de recherche */
+.search-box input[type="text"],
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+  color: #1e293b;
+}
+
+.search-box input[type="text"]:focus,
+.search-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Boutons de filtre */
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn,
+.filter-buttons button {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.filter-btn.active, 
+.filter-btn:hover,
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
