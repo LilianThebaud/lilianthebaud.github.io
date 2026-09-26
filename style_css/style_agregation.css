@@ -134,3 +134,33 @@
     color: #64748b;
     margin-bottom: 12px;
 }
+
+
+/* 1. Animation et survol de la carte de la leçon */
+.lesson-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.lesson-card:hover {
+  transform: scale(1.03); /* Agrandissement léger (ajustable de 1.02 à 1.05) */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12); /* Met en valeur la carte */
+  z-index: 2; /* Évite que la carte agrandie repasse sous la suivante */
+}
+
+/* 2. Masquage par défaut de la référence */
+.lesson-card p {
+  opacity: 0;
+  max-height: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease, margin 0.3s ease;
+}
+
+/* 3. Affichage de la référence au survol */
+.lesson-card:hover p {
+  opacity: 1;
+  max-height: 100px; /* Hauteur suffisante pour contenir le texte */
+  margin-top: 8px;   /* Réintroduit la marge quand le paragraphe est visible */
+  margin-bottom: 8px;
+}
